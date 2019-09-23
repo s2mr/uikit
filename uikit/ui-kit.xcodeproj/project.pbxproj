@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6E878247233911BE00CF3009 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E878246233911BE00CF3009 /* TopViewController.swift */; };
+		6E87824C233914C700CF3009 /* ZenlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E87824B233914C700CF3009 /* ZenlyViewController.swift */; };
+		6E87824F2339172800CF3009 /* ZenlyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E87824E2339172800CF3009 /* ZenlyCardView.swift */; };
 		6E964CC223390E30009B745B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CC123390E30009B745B /* AppDelegate.swift */; };
 		6E964CC823390E33009B745B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E964CC723390E33009B745B /* Assets.xcassets */; };
 		6E964CCB23390E33009B745B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E964CCA23390E33009B745B /* Preview Assets.xcassets */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		6E878246233911BE00CF3009 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		6E87824B233914C700CF3009 /* ZenlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenlyViewController.swift; sourceTree = "<group>"; };
+		6E87824E2339172800CF3009 /* ZenlyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenlyCardView.swift; sourceTree = "<group>"; };
 		6E964CBE23390E30009B745B /* ui-kit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ui-kit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E964CC123390E30009B745B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E964CC723390E33009B745B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +75,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E878248233914AB00CF3009 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6E87824A233914B200CF3009 /* Zenly */,
+				6E878249233914B000CF3009 /* Top */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		6E878249233914B000CF3009 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				6E878246233911BE00CF3009 /* TopViewController.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		6E87824A233914B200CF3009 /* Zenly */ = {
+			isa = PBXGroup;
+			children = (
+				6E87824D2339171A00CF3009 /* Views */,
+				6E87824B233914C700CF3009 /* ZenlyViewController.swift */,
+			);
+			path = Zenly;
+			sourceTree = "<group>";
+		};
+		6E87824D2339171A00CF3009 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E87824E2339172800CF3009 /* ZenlyCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6E964CB523390E2F009B745B = {
 			isa = PBXGroup;
 			children = (
@@ -93,12 +131,12 @@
 		6E964CC023390E30009B745B /* ui-kit */ = {
 			isa = PBXGroup;
 			children = (
+				6E878248233914AB00CF3009 /* Scenes */,
 				6E964CC123390E30009B745B /* AppDelegate.swift */,
 				6E964CC723390E33009B745B /* Assets.xcassets */,
 				6E964CCC23390E33009B745B /* LaunchScreen.storyboard */,
 				6E964CCF23390E33009B745B /* Info.plist */,
 				6E964CC923390E33009B745B /* Preview Content */,
-				6E878246233911BE00CF3009 /* TopViewController.swift */,
 			);
 			path = "ui-kit";
 			sourceTree = "<group>";
@@ -252,7 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E878247233911BE00CF3009 /* TopViewController.swift in Sources */,
+				6E87824F2339172800CF3009 /* ZenlyCardView.swift in Sources */,
 				6E964CC223390E30009B745B /* AppDelegate.swift in Sources */,
+				6E87824C233914C700CF3009 /* ZenlyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
