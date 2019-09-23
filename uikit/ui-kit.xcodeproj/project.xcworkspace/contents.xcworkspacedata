@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:uikit.xcodeproj">
+      location = "self:/Users/kaz/go/src/github.com/s2mr/uikit/uikit/ui-kit.xcodeproj">
    </FileRef>
 </Workspace>

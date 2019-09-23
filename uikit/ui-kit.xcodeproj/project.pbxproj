@@ -13,7 +13,6 @@
 		6E964CC823390E33009B745B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E964CC723390E33009B745B /* Assets.xcassets */; };
 		6E964CCB23390E33009B745B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E964CCA23390E33009B745B /* Preview Assets.xcassets */; };
 		6E964CCE23390E33009B745B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E964CCC23390E33009B745B /* LaunchScreen.storyboard */; };
-		6E964CD923390E33009B745B /* uikitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CD823390E33009B745B /* uikitTests.swift */; };
 		6E964CE423390E33009B745B /* uikitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CE323390E33009B745B /* uikitUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6E964CBE23390E30009B745B /* uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uikit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E964CBE23390E30009B745B /* ui-kit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ui-kit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E964CC123390E30009B745B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E964CC323390E30009B745B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6E964CC523390E30009B745B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,10 +42,8 @@
 		6E964CCA23390E33009B745B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E964CCD23390E33009B745B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E964CCF23390E33009B745B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E964CD423390E33009B745B /* uikitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uikitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E964CD823390E33009B745B /* uikitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uikitTests.swift; sourceTree = "<group>"; };
-		6E964CDA23390E33009B745B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E964CDF23390E33009B745B /* uikitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uikitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E964CD423390E33009B745B /* ui-kitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ui-kitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E964CDF23390E33009B745B /* ui-kitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ui-kitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E964CE323390E33009B745B /* uikitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uikitUITests.swift; sourceTree = "<group>"; };
 		6E964CE523390E33009B745B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,9 +76,8 @@
 		6E964CB523390E2F009B745B = {
 			isa = PBXGroup;
 			children = (
-				6E964CC023390E30009B745B /* uikit */,
-				6E964CD723390E33009B745B /* uikitTests */,
-				6E964CE223390E33009B745B /* uikitUITests */,
+				6E964CC023390E30009B745B /* ui-kit */,
+				6E964CE223390E33009B745B /* ui-kitUITests */,
 				6E964CBF23390E30009B745B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,14 +85,14 @@
 		6E964CBF23390E30009B745B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E964CBE23390E30009B745B /* uikit.app */,
-				6E964CD423390E33009B745B /* uikitTests.xctest */,
-				6E964CDF23390E33009B745B /* uikitUITests.xctest */,
+				6E964CBE23390E30009B745B /* ui-kit.app */,
+				6E964CD423390E33009B745B /* ui-kitTests.xctest */,
+				6E964CDF23390E33009B745B /* ui-kitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6E964CC023390E30009B745B /* uikit */ = {
+		6E964CC023390E30009B745B /* ui-kit */ = {
 			isa = PBXGroup;
 			children = (
 				6E964CC123390E30009B745B /* AppDelegate.swift */,
@@ -107,7 +103,7 @@
 				6E964CCF23390E33009B745B /* Info.plist */,
 				6E964CC923390E33009B745B /* Preview Content */,
 			);
-			path = uikit;
+			path = "ui-kit";
 			sourceTree = "<group>";
 		};
 		6E964CC923390E33009B745B /* Preview Content */ = {
@@ -118,30 +114,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		6E964CD723390E33009B745B /* uikitTests */ = {
-			isa = PBXGroup;
-			children = (
-				6E964CD823390E33009B745B /* uikitTests.swift */,
-				6E964CDA23390E33009B745B /* Info.plist */,
-			);
-			path = uikitTests;
-			sourceTree = "<group>";
-		};
-		6E964CE223390E33009B745B /* uikitUITests */ = {
+		6E964CE223390E33009B745B /* ui-kitUITests */ = {
 			isa = PBXGroup;
 			children = (
 				6E964CE323390E33009B745B /* uikitUITests.swift */,
 				6E964CE523390E33009B745B /* Info.plist */,
 			);
-			path = uikitUITests;
+			path = "ui-kitUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E964CBD23390E2F009B745B /* uikit */ = {
+		6E964CBD23390E2F009B745B /* ui-kit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E964CE823390E33009B745B /* Build configuration list for PBXNativeTarget "uikit" */;
+			buildConfigurationList = 6E964CE823390E33009B745B /* Build configuration list for PBXNativeTarget "ui-kit" */;
 			buildPhases = (
 				6E964CBA23390E2F009B745B /* Sources */,
 				6E964CBB23390E2F009B745B /* Frameworks */,
@@ -151,14 +138,14 @@
 			);
 			dependencies = (
 			);
-			name = uikit;
+			name = "ui-kit";
 			productName = uikit;
-			productReference = 6E964CBE23390E30009B745B /* uikit.app */;
+			productReference = 6E964CBE23390E30009B745B /* ui-kit.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6E964CD323390E33009B745B /* uikitTests */ = {
+		6E964CD323390E33009B745B /* ui-kitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E964CEB23390E33009B745B /* Build configuration list for PBXNativeTarget "uikitTests" */;
+			buildConfigurationList = 6E964CEB23390E33009B745B /* Build configuration list for PBXNativeTarget "ui-kitTests" */;
 			buildPhases = (
 				6E964CD023390E33009B745B /* Sources */,
 				6E964CD123390E33009B745B /* Frameworks */,
@@ -169,14 +156,14 @@
 			dependencies = (
 				6E964CD623390E33009B745B /* PBXTargetDependency */,
 			);
-			name = uikitTests;
+			name = "ui-kitTests";
 			productName = uikitTests;
-			productReference = 6E964CD423390E33009B745B /* uikitTests.xctest */;
+			productReference = 6E964CD423390E33009B745B /* ui-kitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6E964CDE23390E33009B745B /* uikitUITests */ = {
+		6E964CDE23390E33009B745B /* ui-kitUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E964CEE23390E33009B745B /* Build configuration list for PBXNativeTarget "uikitUITests" */;
+			buildConfigurationList = 6E964CEE23390E33009B745B /* Build configuration list for PBXNativeTarget "ui-kitUITests" */;
 			buildPhases = (
 				6E964CDB23390E33009B745B /* Sources */,
 				6E964CDC23390E33009B745B /* Frameworks */,
@@ -187,9 +174,9 @@
 			dependencies = (
 				6E964CE123390E33009B745B /* PBXTargetDependency */,
 			);
-			name = uikitUITests;
+			name = "ui-kitUITests";
 			productName = uikitUITests;
-			productReference = 6E964CDF23390E33009B745B /* uikitUITests.xctest */;
+			productReference = 6E964CDF23390E33009B745B /* ui-kitUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +202,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6E964CB923390E2F009B745B /* Build configuration list for PBXProject "uikit" */;
+			buildConfigurationList = 6E964CB923390E2F009B745B /* Build configuration list for PBXProject "ui-kit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -228,9 +215,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E964CBD23390E2F009B745B /* uikit */,
-				6E964CD323390E33009B745B /* uikitTests */,
-				6E964CDE23390E33009B745B /* uikitUITests */,
+				6E964CBD23390E2F009B745B /* ui-kit */,
+				6E964CD323390E33009B745B /* ui-kitTests */,
+				6E964CDE23390E33009B745B /* ui-kitUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,7 +264,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E964CD923390E33009B745B /* uikitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +280,12 @@
 /* Begin PBXTargetDependency section */
 		6E964CD623390E33009B745B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6E964CBD23390E2F009B745B /* uikit */;
+			target = 6E964CBD23390E2F009B745B /* ui-kit */;
 			targetProxy = 6E964CD523390E33009B745B /* PBXContainerItemProxy */;
 		};
 		6E964CE123390E33009B745B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6E964CBD23390E2F009B745B /* uikit */;
+			target = 6E964CBD23390E2F009B745B /* ui-kit */;
 			targetProxy = 6E964CE023390E33009B745B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -435,10 +421,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"uikit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ui-kit/Preview Content\"";
 				DEVELOPMENT_TEAM = TKM4VSA3YF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = uikit/Info.plist;
+				INFOPLIST_FILE = "ui-kit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,10 +441,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"uikit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ui-kit/Preview Content\"";
 				DEVELOPMENT_TEAM = TKM4VSA3YF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = uikit/Info.plist;
+				INFOPLIST_FILE = "ui-kit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,7 +474,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/uikit.app/uikit";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ui-kit.app/ui-kit";
 			};
 			name = Debug;
 		};
@@ -510,7 +496,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/uikit.app/uikit";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ui-kit.app/ui-kit";
 			};
 			name = Release;
 		};
@@ -557,7 +543,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6E964CB923390E2F009B745B /* Build configuration list for PBXProject "uikit" */ = {
+		6E964CB923390E2F009B745B /* Build configuration list for PBXProject "ui-kit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E964CE623390E33009B745B /* Debug */,
@@ -566,7 +552,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E964CE823390E33009B745B /* Build configuration list for PBXNativeTarget "uikit" */ = {
+		6E964CE823390E33009B745B /* Build configuration list for PBXNativeTarget "ui-kit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E964CE923390E33009B745B /* Debug */,
@@ -575,7 +561,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E964CEB23390E33009B745B /* Build configuration list for PBXNativeTarget "uikitTests" */ = {
+		6E964CEB23390E33009B745B /* Build configuration list for PBXNativeTarget "ui-kitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E964CEC23390E33009B745B /* Debug */,
@@ -584,7 +570,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E964CEE23390E33009B745B /* Build configuration list for PBXNativeTarget "uikitUITests" */ = {
+		6E964CEE23390E33009B745B /* Build configuration list for PBXNativeTarget "ui-kitUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E964CEF23390E33009B745B /* Debug */,
