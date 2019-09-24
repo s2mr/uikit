@@ -29,16 +29,27 @@ final class ZenlyCardView: UIView {
     private func configure() {
         layer.masksToBounds = true
         layer.cornerRadius = 16
-        backgroundColor = .blue
+        backgroundColor = .systemBlue
 
         highlightView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(highlightView)
         NSLayoutConstraint.activate([
             highlightView.leftAnchor.constraint(equalTo: leftAnchor),
             highlightView.rightAnchor.constraint(equalTo: rightAnchor),
-            highlightView.heightAnchor.constraint(equalToConstant: 10),
+            highlightView.heightAnchor.constraint(equalToConstant: 20),
             highlightViewTopConstraint
         ])
+
+        let xEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        xEffect.minimumRelativeValue = -30
+        xEffect.maximumRelativeValue = 30
+        let yEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongHorizontalAxis)
+        yEffect.minimumRelativeValue = -30
+        yEffect.maximumRelativeValue = 30
+
+        let effectGroup = UIMotionEffectGroup()
+        effectGroup.motionEffects = [xEffect, yEffect]
+        addMotionEffect(effectGroup)
 
         motionManager.startDeviceMotionUpdates(to: .main) { [weak self] data, error in
             guard let data = data else {
