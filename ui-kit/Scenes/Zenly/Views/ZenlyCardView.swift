@@ -13,7 +13,8 @@ final class ZenlyCardView: UIView {
 
     private let highlightView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.gray.withAlphaComponent(0.3)
+        view.backgroundColor = #colorLiteral(red: 0.568627451, green: 0.9019607843, blue: 1, alpha: 1)
+        view.layer.masksToBounds = false
         return view
     }()
 
@@ -34,14 +35,26 @@ final class ZenlyCardView: UIView {
         highlightView.frame = CGRect(x: 0, y: frame.midY, width: frame.width, height: 20)
 
         var starPathes: [UIBezierPath] = []
-        while starPathes.count < 30 {
-            let (path, vertexes) = starVertexes(
-                radius: 20,
-                center: CGPoint(
-                    x: CGFloat(arc4random_uniform(UInt32(frame.width))),
-                    y: CGFloat(arc4random_uniform(UInt32(frame.height)))
-                )
-            )
+        while starPathes.count < 100 {
+            let (path, vertexes): (path: UIBezierPath, vertexes: [CGPoint]) = {
+                let x: CGFloat = .random(in: 0...frame.width)
+                let y: CGFloat = .random(in: 0...frame.height)
+                let width = CGFloat.random(in: 5...30)
+                let height = CGFloat.random(in: 5...30)
+                switch starPathes.count % 3 {
+                case 0:
+                    return UIBezierPath.star(
+                        center: CGPoint(x: x, y: y),
+                        radius: width
+                    )
+                case 1:
+                    return UIBezierPath.rectangle(
+                        rect: CGRect(x: x, y: y, width: width, height: height)
+                    )
+                default:
+                    return UIBezierPath.circle(origin: CGPoint(x: x, y: y), radius: width)
+                }
+            }()
             var contains = false
             for existsPath in starPathes {
                 guard !contains else { break }
@@ -61,7 +74,7 @@ final class ZenlyCardView: UIView {
             path.usesEvenOddFillRule = true
             return path.cgPath
         }()
-        starLayer.fillColor = UIColor.systemBlue.cgColor
+        starLayer.fillColor = #colorLiteral(red: 0.007843137255, green: 0.7607843137, blue: 1, alpha: 1)
         starLayer.fillRule = .evenOdd
         starView.layer.addSublayer(starLayer)
 
@@ -74,13 +87,14 @@ final class ZenlyCardView: UIView {
     private func configure() {
         layer.masksToBounds = true
         layer.cornerRadius = 16
+        backgroundColor = #colorLiteral(red: 0.3176470588, green: 0.8431372549, blue: 1, alpha: 1)
 
         let xEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
         xEffect.minimumRelativeValue = -30
         xEffect.maximumRelativeValue = 30
-        let yEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongHorizontalAxis)
-        yEffect.minimumRelativeValue = -30
-        yEffect.maximumRelativeValue = 30
+        let yEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+        yEffect.minimumRelativeValue = -60
+        yEffect.maximumRelativeValue = 60
 
         let effectGroup = UIMotionEffectGroup()
         effectGroup.motionEffects = [xEffect, yEffect]
@@ -105,18 +119,12 @@ final class ZenlyCardView: UIView {
 
         highlightView.center.y = center.y / 2 + center.y * CGFloat(initialRotation - rotation)
     }
+}
 
-    /// 星型正多角形の頂点
-    ///
-    /// - Parameters:
-    ///   - radius: 外接円の半径
-    ///   - center: 中心の座標
-    ///   - roundness: 外接円と内接円の比（min:0, max:1）
-    ///   - vertexes: 外接正多角形の頂点の数
-    func starVertexes(
-        radius: CGFloat, center: CGPoint, roundness: CGFloat = 0.5, numberOfVertexes vertexes: Int = 5
-    ) -> (path: UIBezierPath, vertexes: [CGPoint]) {
-        let vertexes = (vertexes * 2)
+private extension UIBezierPath {
+    static func star(center: CGPoint, radius: CGFloat) -> (path: UIBezierPath, vertexes: [CGPoint]) {
+        let roundness: CGFloat = 0.5
+        let vertexes = 5 * 2
         let points = [Int](0...vertexes).map { offset -> CGPoint in
             let r = (offset % 2 == 0) ? radius : roundness * radius
             let θ = CGFloat(offset)/CGFloat(vertexes) * (2 * CGFloat.pi) - CGFloat.pi/2
@@ -129,5 +137,31 @@ final class ZenlyCardView: UIView {
         path.close()
 
         return (path: path, vertexes: points)
+    }
+
+    static func rectangle(rect: CGRect) -> (path: UIBezierPath, vertexes: [CGPoint]) {
+        let path = UIBezierPath(rect: rect)
+        return (
+            path: path,
+            vertexes: [
+                .init(x: rect.minX, y: rect.minY),
+                .init(x: rect.maxX, y: rect.minY),
+                .init(x: rect.maxX, y: rect.maxY),
+                .init(x: rect.minX, y: rect.maxY)
+            ]
+        )
+    }
+
+    static func circle(origin: CGPoint, radius: CGFloat) -> (path: UIBezierPath, vertexes: [CGPoint]) {
+        let path = UIBezierPath(ovalIn: CGRect(origin: origin, size: CGSize(width: radius/2, height: radius/2)))
+        return (
+            path: path,
+            vertexes: [
+                .init(x: origin.x + radius, y: origin.y),
+                .init(x: origin.x + 2 * radius, y: origin.y + radius),
+                .init(x: origin.x + radius, y: origin.y + 2 * radius),
+                .init(x: origin.x, y: origin.y * radius)
+            ]
+        )
     }
 }
