@@ -8,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = ZenlyViewController()
+        window?.rootViewController = Text3DViewController()
 
         return true
     }

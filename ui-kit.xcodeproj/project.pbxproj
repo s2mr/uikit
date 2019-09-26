@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25D51986233CD46600CA2CF9 /* Text3DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D51985233CD46600CA2CF9 /* Text3DViewController.swift */; };
 		6E878247233911BE00CF3009 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E878246233911BE00CF3009 /* TopViewController.swift */; };
 		6E87824C233914C700CF3009 /* ZenlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E87824B233914C700CF3009 /* ZenlyViewController.swift */; };
 		6E87824F2339172800CF3009 /* ZenlyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E87824E2339172800CF3009 /* ZenlyCardView.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25D51985233CD46600CA2CF9 /* Text3DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text3DViewController.swift; sourceTree = "<group>"; };
 		6E878246233911BE00CF3009 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		6E87824B233914C700CF3009 /* ZenlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenlyViewController.swift; sourceTree = "<group>"; };
 		6E87824E2339172800CF3009 /* ZenlyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenlyCardView.swift; sourceTree = "<group>"; };
@@ -75,9 +77,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25D51984233CD43000CA2CF9 /* Text3D */ = {
+			isa = PBXGroup;
+			children = (
+				25D51985233CD46600CA2CF9 /* Text3DViewController.swift */,
+			);
+			path = Text3D;
+			sourceTree = "<group>";
+		};
 		6E878248233914AB00CF3009 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				25D51984233CD43000CA2CF9 /* Text3D */,
 				6E87824A233914B200CF3009 /* Zenly */,
 				6E878249233914B000CF3009 /* Top */,
 			);
@@ -289,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25D51986233CD46600CA2CF9 /* Text3DViewController.swift in Sources */,
 				6E878247233911BE00CF3009 /* TopViewController.swift in Sources */,
 				6E87824F2339172800CF3009 /* ZenlyCardView.swift in Sources */,
 				6E964CC223390E30009B745B /* AppDelegate.swift in Sources */,
