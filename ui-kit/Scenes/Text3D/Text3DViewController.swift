@@ -19,15 +19,25 @@ final class Text3DViewController: UIViewController {
         box.materials = [boxMaterial]
         let boxNode = SCNNode(geometry: box)
 
-        boxNode.addChildNode(textNode)
+//        boxNode.addChildNode(textNode)
 
-//        scene.rootNode.addChildNode(textNode)
+        let camera = SCNCamera()
+
+        UIView.animate(withDuration: 30) {
+            camera.zFar = 1000
+        }
+//        boxNode.camera = camera
+
 
         let scene = SCNScene()
-        scene.rootNode.addChildNode(boxNode)
+        scene.rootNode.addChildNode(textNode)
+//        scene.rootNode.addChildNode(boxNode)
+
+        scene.rootNode.camera = camera
 
         scnView.scene = scene
-        scnView.camera
         scnView.allowsCameraControl = true
+//        scnView.defaultCameraController.roll(by: 10, aroundScreenPoint: .init(x: 30, y: 30), viewport: .init(width: 100, height: 20))
+//        scnView
     }
 }
